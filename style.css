@@ -43,6 +43,7 @@ main{
 }
 .container__imgs{
     position: relative;
+    max-height: 530px;
 }
 .container__imgs_principal{
     display: flex;
@@ -60,7 +61,9 @@ main{
 .container__imgs_principal_shadow{
     width: var(--mobile-principal-images);
 }
-
+.container_imgs_principal_box_desk{
+    display: none;
+}
 
 .main-content__box{
     display: flex;
@@ -125,17 +128,17 @@ main{
     border-top: 1px solid #CCC;
 }
 
-.bold{
+.active .main-content__box_lista_itens_box_text{
     font-weight: bold;
     
 }
 
-.rotate{
+.active .main-content__box_lista_itens_box_seta{
     cursor: pointer;
     transform: rotate(180deg);
 }
 
-.hidden{
+.active .descricao-lista{
     display: flex;
     transition: 2s;
 }
@@ -147,13 +150,15 @@ main{
 }
 
 
-@media(min-width:730px){
+@media(min-width:820px){
 
     .container{
+        box-sizing: border-box;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         height: 90vh;
-        overflow: hidden;
+        max-height: 560px;
+        /* overflow: hidden; */
     }
     .main-content__box{
         align-items: initial;
@@ -165,6 +170,7 @@ main{
     }
 
     .container_img{
+        
         width: 500px;
     }
     .container__imgs_principal{
@@ -176,19 +182,36 @@ main{
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
-        width: 450px;
+        width: 550px;
+        max-height: 560px;
         margin-right: 2rem;
+        position: relative;
+        height: 90vh;
+        overflow: hidden;
     }
     
     .container_img_principal_woman_desk{
-        display: absolute;
-        transform: translate(-20%, 50%);
+        position: absolute;
+        left: -15%;
+        /* top: 50%; */
+        /* transform: translate(-20%, 50%); */
         width: 600px;
+        z-index: 1;
     }
     .container_imgs_principal_shadow_desk{
+        position: absolute;
         width: 1100px;
+        top: -250px;
+        left: -110%;
         /* transform: translate(-250px, -250px); */
-        margin-left: -168%;
-        margin-top: -137%;
+      
+    }
+    .container_imgs_principal_box_desk{
+        display: initial;
+        position: absolute;
+        top: 50%;
+        left: -16%;
+        z-index: 10;
+        /* transform: translate(0,-50%); */
     }
 }

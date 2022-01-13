@@ -1,49 +1,16 @@
-//const itemLista = document.getElementById(`main-content__box_lista-id`);
 
 
-// const expandList = (event)=>{
+const faqOptions = document.querySelectorAll('.main-content__box_lista_itens')
+console.log(faqOptions)
 
-    
-// }
-
-// const expand ={
-//     'tem01': ()=> itemLista.style.display='relative'
-// }
-
-//itemLista.addEventListener(`click`, expandList);
-
-
-
-
-
-
-
-const faqOptions = document.querySelectorAll('.main-content__box_lista_itens_box')
-
-//const arrowRotate = document.querySelectorAll('.main-content__box_lista_itens_box_seta')
-
-
-faqOptions.forEach((element) => {
-    element.addEventListener('click', () => {
-        element.firstElementChild.classList.toggle('bold')
-        element.lastElementChild.classList.toggle('rotate')
+faqOptions.forEach((option, key) => {
+    option.addEventListener('click', () => {
+        option.classList.toggle('active')
+        faqOptions.forEach((element,index)=>{
+            if(key !== index){
+                element.classList.remove('active');
+            }
+        })
     })
-})
-
-// arrowRotate.forEach((element)=>{
-//     element.addEventListener(`click`,()=>{
-//         element.firstElementChild.classList.toggle('rotate')
-//         console.log(element)
-//     })
-// })
-
-
-const expand = document.querySelectorAll('.main-content__box_lista_itens')
-
-expand.forEach((element)=>{
-    element.addEventListener('click',()=>{
-        element.lastElementChild.classList.toggle('hidden')
-    })
-    
 })
 
