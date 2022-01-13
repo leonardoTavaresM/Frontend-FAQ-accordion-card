@@ -96,6 +96,9 @@ main{
     display: flex;
     justify-content: space-between;
 }
+.main-content__box_lista_itens_box:hover{
+    cursor: pointer;
+}
 .main-content__box_lista_itens_box_text{
     color: var(--color-text);
     margin: 0 1rem 1rem 0;
