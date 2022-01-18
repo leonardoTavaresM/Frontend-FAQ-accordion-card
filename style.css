@@ -21,6 +21,7 @@ body{
     font-family: var(--kumbh-sans);
     background-image: linear-gradient(180deg,var(--soft-violet),var(--soft-blue));
     padding-top:1rem ;
+    min-width: 325px
 }
 
 main{
@@ -160,7 +161,10 @@ main{
         flex-direction: row;
         justify-content: space-between;
         height: 90vh;
+        min-height: 500px;
         max-height: 560px;
+        max-width: 1050px;
+        padding: 0;
         /* overflow: hidden; */
     }
     .main-content__box{
